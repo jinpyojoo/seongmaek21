@@ -1,0 +1,212 @@
+div.game-player {
+    width: 30px;
+    height: 30px;
+    bottom: 0px;
+    position: absolute;
+    border-radius: 30px;
+    background: white;
+}
+
+div#game-ball {
+    background: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 100%;
+}
+
+@keyframes ob1animation {
+    0% {
+        border: none;
+    }
+    30% {
+        opacity: 1;
+        border: none;
+        background: cadetblue;
+    }
+    80% {
+        opacity: 0.5;
+        border: none;
+        background: cadetblue;
+    }
+    100% {
+        background: none;
+        border: none;
+    }
+}
+
+@keyframes ob3animation {
+    0% {
+        top: 0%;
+        border: none;
+    }
+    30% {
+        top: 100%;
+        opacity: 1;
+        border: none;
+        background: mediumslateblue;
+    }
+    80% {
+        opacity: 0.5;
+        border: none;
+        background: mediumslateblue;
+    }
+    100% {
+        background: none;
+        border: none;
+    }
+}
+
+
+/* obstacle */
+div.game-ob1 {
+    position: absolute;
+    width: 45vw;
+    height: calc(100vh - 5px);
+    border: solid 2px cadetblue;
+    animation-name: ob1animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+div.game-ob2 {
+    right: 0;
+    position: absolute;
+    width: 45vw;
+    height: calc(100vh - 5px);
+    border: solid 2px cadetblue;
+    animation-name: ob1animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+
+div.game-ob3 {
+    position: absolute;
+    width: calc(100vw - 5px);
+    height: 30vh;
+    border: solid 2px mediumslateblue;
+    animation-name: ob3animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+div.game-ob5 {
+    position: absolute;
+    width: calc(100vw - 5px);
+    height: 30vh;
+    border: solid 2px cadetblue;
+    animation-name: ob1animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+div.game-ob6 {
+    position: absolute;
+    width: calc(100vw - 5px);
+    height: 30vh;
+    bottom: 0;
+    border: solid 2px cadetblue;
+    animation-name: ob1animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+div.game-ob7 {
+    position: absolute;
+    height: calc(100vh - 100px);
+    width: 50px;
+    top: 0;
+    left: calc(50vw - 25px);
+    border: solid 2px cadetblue;
+    animation-name: ob1animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+div.game-ob4 {
+    position: absolute;
+    width: calc(100vw - 5px);
+    height: 30vh;
+    bottom: 0;
+    border: solid 2px cadetblue;
+    animation-name: ob1animation;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+div.game-ptob1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    background: cadetblue;
+    z-index: 1;
+}
+
+div.game-ptob2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50vh;
+    left: 50vh;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    background: cadetblue;
+    z-index: 1;
+}
+
+div.game-ptob3 {
+    position: absolute;
+    width: 100vw;
+    height: 50px;
+    bottom: 0;
+    background: cadetblue;
+    z-index: 1;
+}
+
+div.game-ptob4 {
+    position: absolute;
+    width: 50px;
+    height: 100vh;
+    top: 0;
+    background: cadetblue;
+    z-index: 1;
+}
+
+div.game-ptob5 {
+    position: static;
+    top: 0;
+    opacity: 1;
+    transition: 0.3s;
+    width: 100vw;
+    height: 100vw;
+    bottom: 0;
+    background: black;
+    z-index: -3;
+}
+
+span.close {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    padding: 15px 20px 20px 20px;
+    opacity: 1;
+    font-family: sans-serif;
+    user-select: none;
+    font-weight: bolder;;
+}
