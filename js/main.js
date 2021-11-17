@@ -10,7 +10,7 @@ function init() {
 
 document.addEventListener('click', ()=>{
     if (typeof(bg) == "undefined"){
-        bg = new Audio("audio/background.wav")
+        bg = new Audio("audio/background.mp3")
         bg.volume = 0.1
         bg.loop = true
         bg.play()
@@ -439,6 +439,7 @@ function setScreen(type) {
             <span class=\"gameName\">프로젝트</span>\
             <div class=\"btn1\">게임시작</div>\
             <div class=\"btn2\">도움말</div>\
+            <div class=\"btn3\">크레딧</div>\
             </div>"
 
             // 게임 시작버튼 클릭 이벤트 정의
@@ -448,6 +449,10 @@ function setScreen(type) {
             // 게임 방법 클릭 이벤트 정의
             document.getElementsByClassName("btn2")[0].addEventListener("click", () => {
                 setScreen("howtoplay")
+            })
+            // 만든놈들
+            document.getElementsByClassName("btn3")[0].addEventListener("click", () => {
+                setScreen("credit")
             })
 
             break
@@ -474,6 +479,13 @@ function setScreen(type) {
             <div class=\"description\">이 개임은 공으로 벽에서 갑자기 등장하는 장애물들을 피한느 그런개임임미다.<br>\
             위와 아래 대각선 방향으로 이동이 가능함미다.아주 잼있는 게임이죠.<br>\
             청록색 테두리으로 표시되는 부분은 피하고, 파랑색 테두리로 표시되는 부분은 그쪽으로 가야하비단.</div>\
+            </div>"
+            break
+        case "credit":
+            screen.innerHTML = "<div class=\"init credit\">\
+            <span class=\"close\" onclick=\"setScreen('title')\">x</span>\
+            <div class=\"title\">크레딧</div><br>\
+            <div class=\"description\"><b>만든 사람들</b><br><br>주진표(3)<br>조재원(2)<br>김병진(2)<br>김민준(2)<br><br><br><b>사용한 자료</b><br><br>BGM : Ehrling - Dance With Me<br>걸린시간 : 3일</div>\
             </div>"
         default:
             throw Error("Unknown screen type.")
