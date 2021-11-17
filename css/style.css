@@ -139,6 +139,15 @@ div.init.gameover > div.gameover {
     font-size: 60px;
     user-select: none;
 }
+
+div.init.gameover > div.gameover-point {
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 20vh;
+    font-size: 30px;
+    font-family: 'CWDangamAsac-Bold';
+}
 div.init.gameover > div.description {
     animation: gameover 1s forwards;
     font-family: 'Cafe24Ssurround';
@@ -179,7 +188,8 @@ div.game-point {
     text-align: center;
     position: absolute;
     width: 100vw;
-    z-index: -1;
+    z-index: -5;
+    user-select: none;
     font-size: 30px;
     padding-top: 30px;
     font-family: 'Cafe24Ssurround';

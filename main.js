@@ -177,7 +177,7 @@ function ob(obtype){
         case 6:
             $('.game-obstacle').append("<div class=\"game-ob6\"></div>")
             setTimeout(()=>{
-                if (is_colliding($('div.game-ob6'), $('div.game-player'))){
+                if (is_colliding($('div.game-ob5'), $('div.game-player'))){
                     gameover()
                 }
             }, 2200)
@@ -226,6 +226,7 @@ function ptob(ptob){
             setTimeout(()=>{
                 clearInterval(a)
                 $(".game-obstacle").empty()
+                obing = false
             }, 4000)
             break
         case 2:
@@ -240,6 +241,7 @@ function ptob(ptob){
             setTimeout(()=>{
                 clearInterval(pt2)
                 $(".game-obstacle").empty()
+                obing = false
             }, 4000)
             break
         case 3:
@@ -255,6 +257,7 @@ function ptob(ptob){
             setTimeout(()=>{
                 clearInterval(pt3)
                 $(".game-obstacle").empty()
+                obing = false
             }, 4000)
             break
         case 4:
@@ -268,6 +271,7 @@ function ptob(ptob){
                     speed = 4;
                 }
                 $(".game-obstacle").empty()
+                obing = false
             }, 4000)
             break
         // case 5:
@@ -288,6 +292,7 @@ function ptob(ptob){
             setTimeout(()=>{
                 reversal = false
                 $(".game-obstacle").empty()
+                obing = false
             }, 4000)
             break
         
@@ -304,6 +309,7 @@ function ptob(ptob){
             setTimeout(()=>{
                 clearInterval(pt6)
                 $(".game-obstacle").empty()
+                obing = false
             }, 4000)
             break
     }
@@ -314,7 +320,6 @@ function gameover() {
     clearInterval(intv)
     setScreen("gameover")
 }
-var wave;
 var intv;
 function gameStart() {
     document.getElementById('copy').style['opacity'] = '0';
@@ -436,7 +441,7 @@ function setScreen(type) {
     switch (type) {
         case "title":
             screen.innerHTML = "<div class=\"init title\">\
-            <span class=\"gameName\">프로젝트</span>\
+            <span class=\"gameName\">대충 게임</span>\
             <div class=\"btn1\">게임시작</div>\
             <div class=\"btn2\">도움말</div>\
             </div>"
@@ -459,7 +464,6 @@ function setScreen(type) {
         case "gameover":
             screen.innerHTML = "<div class=\"init gameover\">\
             <div class=\"gameover\">GAMEOVER</div>\
-            <div class=\"gameover-point\">wave "+wave+"</div>\
             <div class=\"description\">3초 후 메인화면으로 이동합니다.</div>\
             </div>"
             setTimeout(()=>{
