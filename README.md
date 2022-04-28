@@ -5,5 +5,3 @@ with Team SEMTLE [@RoMo_Official](https://github.com/bluefirewolf534)
 
 # Summary
 This project was created to open a booth at our school festival, Seongmaekjae in 2021.
-
-Which is for our school students.
